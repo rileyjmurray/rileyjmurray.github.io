@@ -10,6 +10,8 @@ _site
 .venv
 assets/libs/
 assets/rendercv/rendercv_output/*.typ
-Gemfile.lock
+# Gemfile.lock — intentionally tracked so the Docker entry_point keeps it
+# (al-folio's entry_point.sh removes Gemfile.lock if untracked, breaking the
+# git-sourced jekyll-terser gem).
 node_modules/
 vendor
