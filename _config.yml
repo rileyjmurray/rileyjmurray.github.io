@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Riley
-middle_name: J.
+middle_name:
 last_name: Murray
 contact_note: >
   See my contact image for the best ways to reach me.
@@ -271,7 +271,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Murray]
-  first_name: [Riley, R., R. J., Riley J., RJ]
+  first_name: [Riley, R., R. J., RJ]
 
   style: apa
   locale: en

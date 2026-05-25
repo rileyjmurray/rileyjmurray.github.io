@@ -16,9 +16,7 @@ selected_papers: true
 social: true
 
 announcements:
-  enabled: true
-  scrollable: true
-  limit: 8
+  enabled: false
 
 latest_posts:
   enabled: true

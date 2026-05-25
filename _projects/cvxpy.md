@@ -3,7 +3,7 @@ layout: page
 title: CVXPY
 description: Core developer and steering committee member
 img:
-importance: 3
+importance: 2
 category: software
 ---
 

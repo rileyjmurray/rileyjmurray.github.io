@@ -1,11 +1,10 @@
 ---
 layout: page
-title: software & service
+title: software
 permalink: /projects/
-description: Open-source software and other public-good work.
+description: Open-source software.
 nav: true
 nav_order: 3
-display_categories: [software, service]
 horizontal: false
 ---
 
