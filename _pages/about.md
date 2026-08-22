@@ -24,7 +24,7 @@ latest_posts:
   limit: 3
 ---
 
-I'm a staff scientist at [Sandia National Laboratories](https://www.sandia.gov/) working at the intersection of randomized numerical linear algebra, mathematical optimization, and quantum characterization, verification, and validation.
+I'm a staff scientist at [Sandia National Laboratories](https://www.sandia.gov/). I have parallel research programs in quantum computer characterization and numerical linear algebra. My PhD was in convex optimization. I still participate in that field by helping to maintain CVXPY.
 
 Before Sandia I was a postdoc at UC Berkeley and Lawrence Berkeley National Lab with [Michael Mahoney](https://www.stat.berkeley.edu/~mmahoney/) and [Jim Demmel](https://people.eecs.berkeley.edu/~demmel/). I did my PhD at Caltech with [Venkat Chandrasekaran](http://users.cms.caltech.edu/~venkatc/) and [Adam Wierman](https://adamwierman.com/), and my undergrad in Industrial Engineering and Operations Research at UC Berkeley.
 
@@ -32,4 +32,3 @@ I'm queer — gender nonconforming and bi.
 My preferred pronouns in everyday life are he/him.
 If you catch me at conferences there's a good chance I'll be dressed fem or wearing makeup.
 Because that can be confusing to people ("wait-- a he/him wearing a dress??") my conference nametags tend to say "he/they."
-
