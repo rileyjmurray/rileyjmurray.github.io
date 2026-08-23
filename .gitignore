@@ -8,6 +8,7 @@ _site
 .sass-cache
 .tweet-cache
 .venv
+__pycache__/
 assets/libs/
 assets/rendercv/rendercv_output/*.typ
 # Gemfile.lock — intentionally tracked so the Docker entry_point keeps it

@@ -1,0 +1,43 @@
+name: Propose Published Publication Metadata
+
+on:
+  schedule:
+    - cron: "17 8 * * 1" # Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-publication-metadata:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Test publication metadata updater
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Find published metadata for arXiv preprints
+        run: python bin/update_publication_metadata.py
+
+      - name: Create pull request for metadata updates
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: _bibliography/papers.bib
+          branch: automation/publication-metadata
+          commit-message: "Update published publication metadata"
+          delete-branch: true
+          title: "Update published publication metadata"
+          body: |
+            This pull request was generated from arXiv and Crossref metadata.
+
+            It preserves each preprint's arXiv link and only proposes an update
+            when Crossref's title closely matches the existing BibTeX record.
