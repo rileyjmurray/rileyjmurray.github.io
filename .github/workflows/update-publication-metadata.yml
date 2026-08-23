@@ -9,6 +9,10 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: publication-metadata-update
+  cancel-in-progress: false
+
 jobs:
   update-publication-metadata:
     runs-on: ubuntu-latest

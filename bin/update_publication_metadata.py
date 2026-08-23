@@ -124,8 +124,15 @@ def crossref_year(record):
     return None
 
 
+def bibtex_value(value):
+    """Escape delimiters and line breaks in metadata inserted into BibTeX."""
+    value = " ".join(str(value).splitlines())
+    return value.replace("{", r"\{").replace("}", r"\}")
+
+
 def set_field(lines, name, value):
     """Replace a field or append it while preserving the entry's basic layout."""
+    value = bibtex_value(value)
     pattern = re.compile(rf"^(?P<indent>\s*){re.escape(name)}\s*=\s*.*$")
     for index, line in enumerate(lines):
         match = pattern.match(line)
@@ -140,12 +147,6 @@ def set_field(lines, name, value):
             lines.insert(index + 1, f"  {name} = {{{value}}},")
             return
     raise ValueError("BibTeX entry has no field to append after")
-
-
-def remove_field(lines, name):
-    """Remove a field without changing unrelated entry content."""
-    pattern = re.compile(rf"^\s*{re.escape(name)}\s*=")
-    lines[:] = [line for line in lines if not pattern.match(line)]
 
 
 def update_entry(entry, fetch):
@@ -168,6 +169,8 @@ def update_entry(entry, fetch):
     if not doi:
         return entry, None
     record = crossref_record(doi, fetch)
+    if record.get("type") != "journal-article":
+        return entry, None
     crossref_titles = record.get("title", [])
     crossref_title = crossref_titles[0] if crossref_titles else ""
     if not crossref_title or not title_matches(title[1], crossref_title):
@@ -194,10 +197,6 @@ def update_entry(entry, fetch):
     year = crossref_year(record)
     if year:
         set_field(lines, "year", year)
-
-    abbr = fields.get("abbr")
-    if abbr and abbr[1].casefold() == "arxiv":
-        remove_field(lines, "abbr")
 
     return "\n".join(lines), key
 
