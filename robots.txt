@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://rileyjmurray.com/sitemap.xml
+Sitemap: https://rileymurray.ai/sitemap.xml
