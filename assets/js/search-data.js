@@ -56,6 +56,11 @@ ninja.data = [{
           description: "Core developer and steering committee member",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cvxpy/";
+            },},{id: "projects-pygsti",
+          title: 'pyGSTi',
+          description: "An open-source Python package for quantum processor characterization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pygsti/";
             },},{id: "projects-randblas",
           title: 'RandBLAS',
           description: "A C++ library for sketching in numerical linear algebra",
