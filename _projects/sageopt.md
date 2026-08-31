@@ -3,7 +3,7 @@ layout: page
 title: sageopt
 description: A Python package for SAGE relaxations in signomial and polynomial optimization
 img:
-importance: 3
+importance: 4
 category: software
 ---
 

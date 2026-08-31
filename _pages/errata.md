@@ -5,7 +5,7 @@ title: errata
 description: Corrections to publications and preprints.
 ---
 
-This page records known errata in our publications and preprints.
+This page records known errata in my publications and preprints.
 
 ## Signomial and Polynomial Optimization via Relative Entropy and Partial Dualization
 
