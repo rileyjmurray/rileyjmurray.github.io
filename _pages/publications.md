@@ -9,6 +9,8 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
+For corrections to publications and preprints, see the [errata page]({{ '/errata/' | relative_url }}).
+
 <!-- Bibsearch Feature -->
 
 {% include bib_search.liquid %}

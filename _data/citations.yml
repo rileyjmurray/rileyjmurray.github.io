@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-22'
+  last_updated: '2026-08-31'
 papers:
   9KRGFbYAAAAJ:2P1L_qKh6hAC:
     citations: 0
@@ -30,7 +30,7 @@ papers:
     title: Sublinear circuits and the constrained signomial nonnegativity problem
     year: '2022'
   9KRGFbYAAAAJ:GnPB-g6toBAC:
-    citations: 13
+    citations: 14
     title: Surrogate-based autotuning for randomized sketching algorithms in regression problems
     year: '2025'
   9KRGFbYAAAAJ:M05iB0D1s5AC:
@@ -50,7 +50,7 @@ papers:
     title: Fast multiplication of random dense matrices with sparse matrices
     year: '2024'
   9KRGFbYAAAAJ:QIV2ME_5wuYC:
-    citations: 25
+    citations: 26
     title: Fast exact leverage score sampling from Khatri-Rao products with applications to tensor decomposition
     year: '2023'
   9KRGFbYAAAAJ:RGFaLdJalmkC:
@@ -98,7 +98,7 @@ papers:
     title: Certifying the quantumness of a nuclear spin qudit through its uniform precession
     year: '2025'
   9KRGFbYAAAAJ:k_IJM867U9cC:
-    citations: 68
+    citations: 69
     title: "Schr\xF6dinger cat states of a nuclear spin qudit in silicon"
     year: '2025'
   9KRGFbYAAAAJ:lSLTfruPkqcC:
