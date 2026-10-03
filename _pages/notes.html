@@ -1,0 +1,40 @@
+---
+layout: default
+permalink: /notes/
+title: notes
+nav: true
+nav_order: 2
+# jekyll-paginate-v2 names every paginated page "index.html", and Jekyll caches
+# Liquid templates by path, so without this the blog's template renders here.
+path: _pages/notes.html
+pagination:
+  enabled: true
+  collection: notes
+  permalink: /page/:num/
+  per_page: 20
+  sort_field: date
+  sort_reverse: true
+  trail:
+    before: 1
+    after: 3
+---
+
+<div class="post">
+  <div class="header-bar">
+    <h1>{{ site.notes_name }}</h1>
+    <h2>{{ site.notes_description }}</h2>
+    <p class="note-feed-link">
+      <a href="{{ '/notes/feed.xml' | relative_url }}"><i class="fa-solid fa-square-rss"></i> feed</a>
+      &nbsp;&middot;&nbsp; longer writing is on the <a href="{{ '/blog/' | relative_url }}">blog</a>
+    </p>
+  </div>
+
+  {% if paginator.posts.size > 0 %} {% for note in paginator.posts %}
+  <article class="note-entry">
+    <div class="note-content">{{ note.content }}</div>
+    {% include note_meta.liquid note=note %}
+  </article>
+  {% endfor %} {% else %}
+  <p class="note-empty">Nothing here yet.</p>
+  {% endif %} {% include pagination.liquid %}
+</div>

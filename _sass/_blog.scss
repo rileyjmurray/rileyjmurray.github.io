@@ -165,3 +165,52 @@
     }
   }
 }
+
+// Notes: short posts without titles (see _layouts/note.liquid, _pages/notes.html)
+.note-feed-link {
+  margin-top: 1rem;
+  color: var(--global-text-color-light);
+}
+
+.note-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  .note-content {
+    font-size: 1.1rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.25rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .note-meta {
+    margin-bottom: 0;
+  }
+}
+
+.note-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.note-empty {
+  color: var(--global-text-color-light);
+  padding-top: 1.5rem;
+}
+
+.note-preview-banner {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px dashed var(--global-theme-color);
+  border-radius: 0.25rem;
+  color: var(--global-theme-color);
+  text-align: center;
+}

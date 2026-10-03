@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /notes/preview/
+title: note preview
+sitemap: false
+robots: noindex, nofollow
+---
+
+{% comment %} Renders a note draft passed in the URL fragment (base64-encoded Markdown), so the phone Shortcut can show what a note will look like
+before committing it. The fragment never leaves the browser. {% endcomment %}
+<div class="post note-page">
+  <div class="note-preview-banner">Preview: not published</div>
+
+  <article class="note-entry">
+    <div class="note-content" id="note-preview">
+      <p class="note-empty">Nothing to preview. This page renders a note draft passed in the URL fragment.</p>
+    </div>
+    <p class="post-meta note-meta"><time id="note-preview-time"></time></p>
+  </article>
+</div>
+
+<script
+  src="{{ site.third_party_libraries.marked.url.js }}"
+  integrity="{{ site.third_party_libraries.marked.integrity.js }}"
+  crossorigin="anonymous"
+></script>
+<script src="{{ '/assets/js/note-preview.js' | relative_url | bust_file_cache }}"></script>

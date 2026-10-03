@@ -25,10 +25,12 @@ on:
       - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
+      - "!_note_drafts/**"
       - "!CONTRIBUTING.md"
       - "!CUSTOMIZE.md"
       - "!FAQ.md"
       - "!INSTALL.md"
+      - "!NOTES.md"
       - "!README.md"
   pull_request:
     branches:
@@ -54,10 +56,12 @@ on:
       - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
+      - "!_note_drafts/**"
       - "!CONTRIBUTING.md"
       - "!CUSTOMIZE.md"
       - "!FAQ.md"
       - "!INSTALL.md"
+      - "!NOTES.md"
       - "!README.md"
   workflow_dispatch:
 

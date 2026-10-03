@@ -4,7 +4,7 @@ title: software
 permalink: /projects/
 description: Open-source software.
 nav: true
-nav_order: 3
+nav_order: 4
 horizontal: false
 ---
 

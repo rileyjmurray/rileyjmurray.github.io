@@ -1,0 +1,17 @@
+{% comment %}
+  Date line for a note. Expects include.note; links the date to the note's
+  permalink unless include.link is false.
+{% endcomment %}
+{% assign note = include.note %}
+<p class="post-meta note-meta">
+  {% if include.link == false %}
+    <time datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: '%B %-d, %Y · %-I:%M %p' }}</time>
+  {% else %}
+    <a href="{{ note.url | relative_url }}"
+      ><time datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: '%B %-d, %Y · %-I:%M %p' }}</time></a
+    >
+  {% endif %}
+  {% for tag in note.tags %}
+    &nbsp; <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+  {% endfor %}
+</p>
