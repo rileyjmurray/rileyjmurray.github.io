@@ -16,3 +16,6 @@ assets/rendercv/rendercv_output/*.typ
 # git-sourced jekyll-terser gem).
 node_modules/
 vendor
+
+# Planning docs: a separate local git repo, kept out of this public one
+docs/superpowers/plans/
