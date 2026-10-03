@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /notes/preview/
 
 Sitemap: https://rileymurray.ai/sitemap.xml
